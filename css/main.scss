@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  & {
+    width:80%;
+    margin: 30px auto;
+    background-color: #efefee;
+    .search-repo {
+      & {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: #eee;
+        padding: 20px;
+      }
+      > input {
+        flex-grow: 1;
+        padding: 15px 10px;
+        border: none;
+        font-size: 18px;
+      }
+      > input:focus {
+        outline: 2px solid #f44336;
+      }
+      > span {
+        background-color: #f44336;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    .repos {
+      & {
+        background-color: #dfe1e0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .repo {
+        & {
+          background-color: white;
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+        }
+        > .btn {
+          & {
+            display: flex;
+            justify-content:flex-end;
+            gap: 5px;
+            width: 30%;
+          }
+          .start {
+            background-color: #009688;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+          }
+          .visit {
+            text-decoration: none;
+            background-color: #e91e63;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.loading {
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  border: 5px solid #f44336;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-top: 10px solid transparent;
+  border-radius: 50%;
+  animation: loading linear 1.2s infinite;
+  display: none;
+}
+.loading.block {
+  display: block;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}

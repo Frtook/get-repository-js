@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 30px auto;
+  background-color: #efefee;
+}
+.container .search-repo {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #eee;
+  padding: 20px;
+}
+.container .search-repo > input {
+  flex-grow: 1;
+  padding: 15px 10px;
+  border: none;
+  font-size: 18px;
+}
+.container .search-repo > input:focus {
+  outline: 2px solid #f44336;
+}
+.container .search-repo > span {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .repos {
+  background-color: #dfe1e0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .repos .repo {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .repos .repo > .btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  width: 30%;
+}
+.container .repos .repo > .btn .start {
+  background-color: #009688;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+}
+.container .repos .repo > .btn .visit {
+  text-decoration: none;
+  background-color: #e91e63;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+}
+
+.loading {
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  border: 5px solid #f44336;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-top: 10px solid transparent;
+  border-radius: 50%;
+  animation: loading linear 1.2s infinite;
+  display: none;
+}
+
+.loading.block {
+  display: block;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */
